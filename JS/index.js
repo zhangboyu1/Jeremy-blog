@@ -54,8 +54,7 @@ class router {
         this.oldUrl = this.homeUrl;
         let homeElement = this.homeUrl.slice(1)
 
-
-        if (homeElement === 'home' || homeElement === '') {
+         if (homeElement === 'home' || homeElement === '') {
             window.tools.setStyle([service, resume, contact], `display`, `none`)
         }
         if (homeElement === 'resume') {
@@ -65,6 +64,7 @@ class router {
         } if (homeElement === 'contact') {
             window.tools.setStyle([resume, home, service], `display`, `none`)
         }
+
     }
 
     refresh = () => {
