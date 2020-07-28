@@ -54,6 +54,8 @@ class router {
         this.oldUrl = this.homeUrl;
         let homeElement = this.homeUrl.slice(1)
 
+        console.log(homeElement)
+        
          if (homeElement === 'home' || homeElement === '') {
             window.tools.setStyle([service, resume, contact], `display`, `none`)
         }
