@@ -1,0 +1,1196 @@
+.body {
+    position: relative;
+    /* overflow-x   : hidden; */
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+
+/* Setting the whole thing */
+
+#container {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    min-height: 100%;
+    padding-bottom: 40px;
+    z-index: 1002;
+}
+
+
+/* Setting the header... */
+
+.header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1006;
+    transform: translateY(5px);
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+}
+
+
+/* ////////////////////////////////////// */
+
+.header>.headerElement {
+    display: inline-block;
+    padding: 0;
+    margin-right: 0;
+}
+
+.header_name {
+    height: 60px;
+    font-size: 30px;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.header_name p {
+    font-size: 25px;
+    margin-bottom: 0;
+    position: absolute;
+    line-height: 3rem;
+    color: gray;
+}
+
+.header_navBar {
+    /* background-color: blue; */
+    height: 60px;
+    float: left;
+    position: absolute;
+    right: 5%;
+}
+
+ul {
+    margin: 0;
+}
+
+.navList {
+    float: left;
+    list-style: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 60px;
+}
+
+.navItemSelected {
+    display: none;
+}
+
+.sticker {
+    background-color: whitesmoke;
+    height: 50px;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+    animation: 0.5s ease 0s 1 normal forwards running stick;
+}
+
+@keyframes stick {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Need to be modified................. */
+
+.navList :hover {
+    color: purple;
+}
+
+.navItem::after {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    color: purple;
+    border-bottom: 4px solid;
+    margin-top: 0.5rem;
+    margin-left: 0px;
+    display: block;
+    z-index: 1001;
+    border-radius: 30%;
+}
+
+.navItemSelected::after {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    color: purple;
+    border-bottom: 4px solid;
+    margin-top: 0.5rem;
+    margin-left: 0px;
+    display: block;
+    z-index: 1001;
+    border-radius: 30%;
+    width: 10%;
+    animation: 0.5s ease 0s 1 normal forwards running eAJKHT;
+}
+
+@keyframes eAJKHT {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(10.3333%);
+    }
+}
+
+a {
+    color: grey;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 3rem;
+    text-decoration: none
+}
+
+
+/* /////////////////Main Body */
+
+.sub {
+    height: 600px;
+    position: absolute;
+    width: 100%;
+    /* overflow     : hidden; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 10;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.main {
+    /* background-color:; */
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1005;
+    background-image: url("/Users/zhangboyu/Projects/jrFirstProject/Image/ll.png") linear-gradient();
+    /* The image used */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes enterPage {
+    0% {
+        opacity: 0.4;
+        background-color: antiquewhite;
+        transform: matrix(0.1, 0, 0, 0.1, 650, 0);
+        display: none;
+    }
+    100% {
+        display: flex;
+    }
+}
+
+@keyframes leavePage {
+    0% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: matrix(0.1, 0, 0, 0.1, -750, 0);
+    }
+}
+
+.main_card_home {
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    /* background-color: aquamarine; */
+    /* Put vertically in the middle */
+    margin-top: 20px;
+    /* put horizontal in the middle */
+    right: 50%;
+    margin-right: -450px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1005;
+    border-radius: 15px 15px 15px 15px;
+    background-color: whitesmoke;
+    /* animation       : enterPage 0.5s ease-in both; */
+}
+
+.main_card_home_header {
+    flex-basis: 55%;
+    position: relative;
+    /* display      : flex; */
+    background-color: purple;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.mian_card_home_headerInfo {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 75px;
+}
+
+.photo {
+    width: 250px;
+    height: 295px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 1px;
+    margin-left: 145px;
+    margin-top: -20px;
+    background-image: url('../Image/profile.jpeg');
+    /* The image used */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo:hover {
+    transform: translateY(-10px);
+}
+
+.mian_card_home_headerInfo-intro {
+    flex-basis: 50%;
+}
+
+.mian_card_home_headerInfo_intro-name {
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    line-height: 20px;
+}
+
+
+/* Responsive page first for the Mobile.... */
+
+@media screen and (max-width: 700px) {
+    /* HOME page............... */
+    .header>.header_name {
+        display: none;
+    }
+    .mian_card_home_headerInfo {
+        flex-direction: column;
+    }
+    .mian_card_home_headerInfo_intro {
+        display: inline-block;
+        flex-basis: 1;
+    }
+    .photo {
+        margin: auto;
+        margin-top: -40px;
+    }
+    .mian_card_home_headerInfo_intro-name {
+        margin-left: 0px;
+        margin-top: 0px;
+        display: inline-block;
+        width: 100%;
+    }
+    .mian_card_home_headerInfo_intro-name h1 {
+        float: left;
+        margin-left: 36.5%;
+        margin-top: 5px;
+        margin-bottom: 0;
+        width: 200px;
+        font-size: 25px;
+    }
+    .mian_card_home_headerInfo_intro-name span {
+        margin-left: 36%;
+        color: white;
+    }
+    .header_name p {
+        margin-bottom: 0;
+        position: fixed;
+        line-height: 3rem;
+    }
+    .main_card_home {
+        width: 100%;
+        /* background-color: black; */
+        left: 0px;
+    }
+    .main_card_home_header {
+        flex-basis: 70%;
+    }
+    .mian_card_home_headerInfo_intro-name a {
+        display: none;
+    }
+    .listHead,
+    .listBody {
+        display: none;
+    }
+    .main_card_home_content-details {
+        display: none;
+    }
+    #aboutMe {
+        margin-left: 0;
+    }
+    .main_card_home_content-aboutMe h3,
+    .main_card_home_content-aboutMe p {
+        display: inline-block;
+        margin: auto;
+        text-align: center;
+        width: max-content;
+        width: 100%;
+        padding: 3px;
+    }
+    /* Resume Page......... */
+    .sub {
+        height: 80rem;
+    }
+    #resume {
+        width: 100%;
+        left: 0px;
+        height: auto;
+    }
+    .main_card_resume_content {
+        overflow: auto;
+        flex-direction: column;
+        height: auto;
+        display: block;
+    }
+    #content-resume {
+        display: block;
+    }
+    .main_card_resume_content_education {
+        position: relative;
+        height: 270px;
+    }
+    #educationCard1 {
+        top: 4rem;
+        left: 2rem;
+    }
+    #educationCard2 {
+        top: 11rem;
+        left: 2rem;
+    }
+    /* Experience card is needed to be setted..... */
+    .main_card_resume_content_experience {
+        position: relative;
+        height: 20rem;
+    }
+    #experienceCard1 {
+        top: 4.5rem;
+        left: 1.5rem;
+    }
+    #experienceCard2 {
+        top: 11.5rem;
+        left: 1.5rem;
+    }
+    .main_card_resume_content_education .cardTiltle {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .main_card_resume_content_experience .cardTiltle {
+        margin-left: 10px;
+        margin-top: 1.5rem;
+    }
+    .main_card_resume_content .main_card_resume_content_education:before {
+        left: 0.5rem;
+        top: 2rem;
+    }
+    #resume-footer {
+        flex-direction: column;
+    }
+    /* height:auto; */
+    #resume .main_card_resume_footer li:after {
+        width: 78%;
+    }
+    #resume .main_card_resume_footer_codingskill:before {
+        display: none;
+    }
+    #resume .main_card_resume_footer_projectmanagementskill:before {
+        display: none;
+    }
+    /* Service page  */
+    #service {
+        width: 100%;
+        left: 0px;
+        height: auto;
+    }
+    #service .main_card_service_content {
+        height: auto;
+        flex-wrap: wrap;
+        overflow: unset;
+    }
+    #collection-card {
+        float: none;
+        height: 18rem;
+        width: 70%;
+        margin: 3.3rem auto;
+    }
+    #collection-card .post-date {
+        left: 350px;
+    }
+    /* Contact-page  */
+    #contact {
+        width: 100%;
+        left: 0px;
+        height: auto;
+    }
+    .main_card_contact_content {
+        flex-direction: column;
+    }
+    #googleMap {
+        width: 480px;
+        height: 300px;
+        margin: auto;
+    }
+    .main_card_contact_content_GetTouch li:not(:first-child) {
+        margin-left: 30%;
+    }
+    #form ul {
+        margin-left: 10%;
+    }
+    #form .wholeInput {
+        width: 90%;
+    }
+}
+
+
+/* /////////////////////////////Main_CardContent///////// */
+
+.main_card_home_content {
+    flex-basis: 45%;
+    background-color: whitesmoke;
+}
+
+.main_card_home_contentInfo {
+    padding: 20px;
+}
+
+.main_card_home_contentInfo .main_card_home_content-aboutMe {
+    float: left;
+    margin-top: 20px;
+    margin-left: 95px;
+}
+
+p {
+    display: block;
+    width: 330px;
+    word-wrap: break-word;
+    /* padding    : 5px; */
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.main_card_home_content-details {
+    /* float   : left; */
+    margin-top: 30px;
+    margin-left: 5rem;
+}
+
+.main_card_home_content-details:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.listHead {
+    margin-left: 5.5rem;
+    float: left;
+    /* padding-left   : 0; */
+}
+
+.listBody {
+    float: left;
+    padding-left: 1rem;
+    left: 10%;
+}
+
+li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style: none;
+    left: 10%
+}
+
+li[class*="lala"] {
+    padding-top: 6.5px;
+    padding-bottom: 7px;
+    left: 10%
+}
+
+
+/* The second page */
+
+.main_card_resume {
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    /* Put vertically in the middle */
+    margin-top: 20px;
+    /* put horizontal in the middle */
+    right: 50%;
+    margin-right: -450px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.main_card_resume_header {
+    flex-basis: 15%;
+    background-color: purple;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main_card_resume_content {
+    flex-basis: 50%;
+    background-color: whitesmoke;
+    overflow: hidden;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.main_card_resume_content_education {
+    flex-basis: 50%;
+}
+
+.main_card_resume_content_experience {
+    flex-basis: 50%;
+}
+
+.educationCard {
+    position: absolute;
+    background-color: white;
+    margin: 0;
+    padding-left: 0;
+    width: 23rem;
+    height: 6rem;
+    left: 5rem;
+    border-radius: 0px 5px 0px 5px;
+    color: gray;
+    border: 1px solid lightgray;
+    border-left: 4px solid purple;
+}
+
+.main_card_resume_content_education-Bachelor {
+    top: 8rem;
+}
+
+.main_card_resume_content_education-Master {
+    top: 16rem;
+}
+
+.cardTiltle {
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.experienceCard {
+    position: absolute;
+    background-color: white;
+    padding-left: 0;
+    width: 20rem;
+    height: 6rem;
+    left: 33rem;
+    margin-bottom: 20px;
+    border-radius: 0px 5px 0px 5px;
+    color: gray;
+    border: 1px solid lightgray;
+    border-left: 4px solid purple;
+}
+
+.main_card_resume_content_experience-JR {
+    top: 8rem;
+}
+
+.main_card_resume_content_experience-legrand {
+    top: 16rem;
+}
+
+
+/* ///////// DecorationBar //////////// */
+
+
+/* main tree */
+
+.main_card_resume_content_education:before {
+    content: "";
+    width: 8rem;
+    height: 14rem;
+    position: absolute;
+    border-left: 3px solid silver;
+    /* top          : 19rem; */
+    top: 7.75rem;
+    left: 3.2rem;
+    display: block;
+    z-index: 1002;
+}
+
+.main_card_resume_content_experience:before {
+    content: "";
+    width: 8rem;
+    height: 14rem;
+    position: absolute;
+    border-left: 3px solid silver;
+    /* top          : 19rem; */
+    top: 7.75rem;
+    left: 31.2rem;
+    display: block;
+    z-index: 1002;
+}
+
+
+/* Circal*/
+
+.main_card_resume_content_education ul:before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid purple;
+    /* top          : 19rem; */
+    top: 2.2rem;
+    left: -1.4rem;
+    display: block;
+    z-index: 1002;
+}
+
+.main_card_resume_content_education ul:after {
+    content: "";
+    width: 0.6rem;
+    height: 2rem;
+    position: absolute;
+    border-bottom: 3px solid purple;
+    /* top          : 19rem; */
+    top: 0.5rem;
+    left: -0.6rem;
+    display: block;
+    z-index: 1002;
+}
+
+.main_card_resume_content_experience ul:before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid purple;
+    /* top          : 19rem; */
+    top: 1.2rem;
+    left: -1.4rem;
+    display: block;
+    z-index: 1002;
+}
+
+.main_card_resume_content_experience ul:after {
+    content: "";
+    width: 0.6rem;
+    height: 2rem;
+    position: absolute;
+    border-bottom: 3px solid purple;
+    /* top          : 19rem; */
+    top: -0.5rem;
+    left: -0.6rem;
+    display: block;
+    z-index: 1002;
+}
+
+.main_card_resume_content ul:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 2px 10px 1px;
+}
+
+
+/* 
+ Footer section
+*/
+
+.main_card_resume_footer {
+    flex-basis: 35%;
+    background-color: bisque;
+    overflow: hidden;
+    display: flex;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.main_card_resume_footer_hardwareskill {
+    flex-basis: 25%;
+    background-color: whitesmoke;
+}
+
+.main_card_resume_footer_codingskill {
+    flex-basis: 25%;
+    background-color: whitesmoke;
+}
+
+.main_card_resume_footer h3 {
+    font-size: 15px;
+    margin-left: 0;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    text-align: 30%;
+    margin-top: 15px;
+}
+
+.main_card_resume_footer_projectmanagementskill {
+    flex-basis: 25%;
+    background-color: whitesmoke;
+}
+
+
+/* Add a border bar */
+
+.main_card_resume_footer_projectmanagementskill:before {
+    content: "";
+    width: 0.6rem;
+    height: 6rem;
+    position: absolute;
+    border-left: 3px solid silver;
+    top: 26rem;
+    left: 27.2rem;
+    display: block;
+    z-index: 1001;
+}
+
+.main_card_resume_footer_codingskill:before {
+    content: "";
+    width: 0.6rem;
+    height: 6rem;
+    position: absolute;
+    border-left: 3px solid silver;
+    top: 26rem;
+    left: 12.9rem;
+    display: block;
+    z-index: 1001;
+}
+
+.main_card_resume_footer_productskill:before {
+    content: "";
+    width: 0.6rem;
+    height: 6rem;
+    position: absolute;
+    border-left: 3px solid silver;
+    top: 26rem;
+    left: 41rem;
+    display: block;
+    z-index: 1001;
+}
+
+.main_card_resume_footer_productskill {
+    flex-basis: 25%;
+    background-color: whitesmoke;
+}
+
+.main_card_resume_footer li {
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.dynamicBar {
+    content: "";
+    /* width        : 1rem; */
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 21px;
+    background: blueviolet;
+    display: block;
+    z-index: 1002;
+    box-shadow: 0px 0px 7px 0px blueviolet;
+    /* width        : 14%; */
+    transition: width 2s ease-in-out;
+}
+
+
+/* Hardware Skills */
+
+.main_card_resume_footer li:after {
+    content: "";
+    width: 10rem;
+    height: 0.5rem;
+    position: absolute;
+    margin-top: 3px;
+    background: lightgray;
+    display: block;
+    z-index: 1001;
+}
+
+
+/* Ok */
+
+
+/* //////////////////////////////////////// */
+
+.main_card_resume_footer ul {
+    padding-left: 15px;
+}
+
+
+/* /////////////////Service Page Css */
+
+.main_card_service {
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    /* Put vertically in the middle */
+    margin-top: 20px;
+    /* put horizontal in the middle */
+    right: 50%;
+    margin-right: -450px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 15px 15px 15px 15px;
+    /* background-color: aqua; */
+}
+
+.main_card_service_header {
+    flex-basis: 20%;
+    background-color: purple;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main_card_service h1 {
+    text-align: center;
+}
+
+.main_card_service_content {
+    flex-basis: 80%;
+    background-color: whitesmoke;
+    /* height       : 885px; */
+    /* flex-wrap    : nowrap; */
+    overflow: scroll;
+}
+
+.flex-item {
+    width: 384;
+    height: 280;
+    float: left;
+    /* padding      : 10px; */
+    background-color: white;
+}
+
+.imageWrapper img {
+    opacity: 0.3;
+}
+
+.imageWrapper:hover {
+    background-color: purple;
+    z-index: 1020;
+}
+
+.link:hover {
+    color: purple;
+    z-index: 1020;
+}
+
+
+/*  */
+
+.green {
+    color: green;
+}
+
+
+/* webDesign Block */
+
+
+/* //////////////Contact Page////////////////// */
+
+.main_card_contact {
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    /* Put vertically in the middle */
+    margin-top: 20px;
+    /* put horizontal in the middle */
+    right: 50%;
+    margin-right: -450px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.main_card_contact_header {
+    flex-basis: 20%;
+    background-color: purple;
+}
+
+.main_card_contact_header h1 {
+    text-align: center;
+}
+
+.main_card_contact_content {
+    flex-basis: 80%;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+.main_card_contact_content_GetTouch {
+    flex-basis: 50%;
+}
+
+.main_card_contact_content_GetTouch p {
+    font-size: 13px;
+    display: inline-block;
+}
+
+.main_card_contact_content h3 {
+    text-align: start;
+}
+
+.main_card_contact_content ul {
+    padding: 0;
+    margin-top: 30px;
+}
+
+.main_card_contact_content_GetTouch-contactInfo {
+    padding-left: 25px;
+}
+
+.main_card_contact_content_GetTouch-contactInfo img {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 10px;
+}
+
+#googleMap {
+    width: 380px;
+    height: 200px;
+}
+
+.main_card_contact_content_contactForm {
+    flex-basis: 50%;
+    background-color: whitesmoke;
+}
+
+.main_card_contact_content_contactForm form {
+    margin-left: 25px;
+}
+
+.main_card_contact_content_contactForm li {
+    padding: 10px;
+}
+
+.main_card_contact_content_contactForm input {
+    width: 320px;
+    height: 35px;
+    outline-style: none;
+    border-width: 0;
+    display: inline-block;
+}
+
+.main_card_contact_content_contactForm-message {
+    height: 100px;
+}
+
+.main_card_contact_content_contactForm-btn {
+    height: 120px;
+    width: 50px;
+    background-color: purple;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.main_card_contact_content_contactForm img {
+    height: 35px;
+    width: 35px;
+    float: left;
+    padding-top: 1px;
+    margin-right: 2px;
+}
+
+.wholeInput {
+    width: 360px;
+    border: 1px solid lightgray;
+    background-color: white;
+    height: auto;
+    display: inline-block;
+}
+
+.reminder {
+    /* display:none; */
+    font-size: 12px;
+    border-bottom: 1.5px solid purple;
+    width: 130px;
+    transition: all 0.2s ease-in-out;
+}
+
+.errorText {
+    font-size: 12px;
+    border-bottom: 1.5px solid red;
+    width: 130px;
+    transition: all 0.2s ease-in-out;
+}
+
+.wholeInput:hover {
+    border: 1px solid purple;
+}
+
+.contactList {
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 370px;
+}
+
+.ci-icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+}
+
+.ci-icon i {
+    font-size: 18px;
+    color: purple;
+    text-align: center;
+    line-height: 22px;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.input-icon {
+    background-color: lightgrey;
+    width: 23px;
+    height: 40px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    color: purple;
+}
+
+.input-icon i {
+    font-size: 18px;
+    color: gray;
+    text-align: center;
+    line-height: 40px;
+}
+
+.fa-map-marker:before {
+    content: "\f041";
+}
+
+.footer {
+    /* float              : left; */
+    text-align: center;
+    /* background-color      : black; */
+    bottom: 0;
+    position: fixed;
+    /* margin-bottom         :10%; */
+    /* background-color      : black; */
+    color: black;
+    width: 100%;
+    height: 40px;
+    z-index: 1001;
+}
+
+
+/* /////attribute section/////// */
+
+.middle {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.netWorkIcon {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.linkIn {
+    margin-bottom: 0px;
+    float: right;
+}
+
+.itali {
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.relative {
+    position: relative;
+    padding: 10px;
+    margin: 20px;
+}
+
+.absolute {
+    position: absolute;
+    background-color: whitesmoke;
+    top: 20px;
+    left: 300px;
+    width: 40px;
+    height: 60px;
+}
+
+.w110 {
+    width: 110%;
+    position: relative;
+}
+
+.w100 {
+    width: 100%;
+    position: relative;
+}
+
+.w90 {
+    width: 90%;
+    position: relative;
+}
+
+.w98 {
+    width: 98%;
+    position: relative;
+}
+
+.w80 {
+    width: 80%;
+    position: relative;
+}
+
+.w80 {
+    width: 80%;
+    position: relative;
+}
+
+.w70 {
+    width: 70%;
+    position: relative;
+}
+
+.purple {
+    color: purple;
+}
+
+.red {
+    color: red;
+}
