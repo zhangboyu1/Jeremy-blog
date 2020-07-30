@@ -1,8 +1,5 @@
-
 class Tools {
-
     constructor() {
-
         this.setPage = {
             enter: (currentUrl) => {
                 let currentUrl2 = currentUrl.slice(1);
@@ -47,11 +44,11 @@ class router {
     };
 
     load = () => {
-
         this.homeUrl = location.hash.slice(1) || '/';
         this.routes[this.homeUrl]();
         this.oldUrl = this.homeUrl;
         let homeElement = this.homeUrl.slice(1)
+
         if (homeElement === 'home' || homeElement === '') {
             window.tools.setStyle([service, resume, contact], `display`, `none`)
         }
@@ -73,31 +70,24 @@ class router {
         const currentUrl = this.currentUrl.slice(1);
 
         if (this.oldUrl == `/`) {
-
             setTimeout(() => {
                 document.getElementById(currentUrl).style.display = `flex`;
                 window.tools.setPage.enter(this.currentUrl)
-
             }, 600)
-
             window.tools.setStyle([resume, contact, service], `display`, `none`)
             window.tools.setPage.leave(`/home`)
-
         } if (this.oldUrl == `/home`) {
             setTimeout(() => {
                 document.getElementById(currentUrl).style.display = `flex`;
                 window.tools.setPage.enter(this.currentUrl)
             }, 600)
-
             window.tools.setStyle([resume, contact, service], `display`, `none`)
             window.tools.setPage.leave(`/home`)
-
         } if (this.oldUrl == `/resume`) {
             setTimeout(() => {
                 document.getElementById(currentUrl).style.display = `flex`;
                 window.tools.setPage.enter(this.currentUrl)
             }, 600)
-
             window.tools.setStyle([home, contact, service], `display`, `none`)
             window.tools.setPage.leave(this.oldUrl)
         }
@@ -105,19 +95,15 @@ class router {
             setTimeout(() => {
                 document.getElementById(currentUrl).style.display = `flex`;
                 window.tools.setPage.enter(this.currentUrl)
-
             }, 600)
-
             window.tools.setStyle([home, contact, resume], `display`, `none`)
             window.tools.setPage.leave(this.oldUrl)
         }
         if (this.oldUrl == `/contact`) {
-
             setTimeout(() => {
                 document.getElementById(currentUrl).style.display = `flex`;
                 window.tools.setPage.enter(this.currentUrl)
             }, 600)
-
             window.tools.setStyle([home, service, resume], `display`, `none`)
             window.tools.setPage.leave(this.oldUrl)
         }
@@ -140,7 +126,6 @@ class router {
 window.Router = new router();
 window.Router.init();
 Router.route('/', () => {
-
     let homeElement = document.getElementById(`home`);
     homeElement.style.display = `flex`;
 });
@@ -151,7 +136,6 @@ Router.route('/home', () => {
         window.tools.setPage.enter(Router.currentUrl)
     }, 600)
 });
-
 
 Router.route('/resume', function () {
     if (Router.homeUrl === `/resume`) {
@@ -185,13 +169,20 @@ Router.route('/contact', function () {
     }
 });
 
+
+
 ////////////////////////////Control button part /////////////////////////
 
 class Click {
+
     click = () => {
         const wholeInput = document.getElementsByClassName("wholeInput");
         const errorTextList = document.getElementsByClassName("errorText");
+        var x = document.getElementById("myTopnav");
+        var y = document.getElementsByClassName("sub");
         if (event.target.className === `middle navItem`) {
+            x.className = "headerElement header_navBar";
+            y[0].style.marginTop = ''
             if (event.target.childNodes[1].tagName != `A`) {
                 const AllnodeList = document.getElementsByClassName(event.target.childNodes[1].className)
                 const AllnodeList_2 = document.getElementsByClassName(`navList`)
@@ -204,7 +195,6 @@ class Click {
                                 dynamicBarList[j].style.display = `block`;
                                 setTimeout(() => {
                                     dynamicBarList[j].style.transition = `width 2s ease-in-out`;
-
                                     dynamicBarList[j].style.width = `70%`;
                                 }, 1000)
                             }
@@ -220,7 +210,6 @@ class Click {
                                 errorTextList[i].style.width = `150`;
                             }
                         }
-
                     } else {
                         AllnodeList[i].style.display = 'none';
                         AllnodeList[i].style.display = 'none';
@@ -228,18 +217,23 @@ class Click {
                         AllnodeList_2[i].style.marginTop = `0px`;
                         AllnodeList_2[i].style.color = `lightGray`;
                     }
+
                 }
+
             }
         }
         return 1
     }
-
     init() {
         window.addEventListener('click', this.click.bind(this), false);
     }
 }
+
 ///////////////////////////Scroll Function ====>Header/////////////////////////////
+
+
 class Scroll {
+
     handleOnScroll = () => {
         const scrollPosition = window.scrollY;
         if (scrollPosition > 18) {
@@ -275,7 +269,6 @@ class Input {
     handleInputChange = () => {
         const inputTagList = document.getElementsByTagName("input");
         const reminderList = document.getElementsByClassName("reminder");
-
         for (let i = 0; i < inputTagList.length - 1; i++) {
             if (inputTagList[i].value != ``) {
                 reminderList[i].style.display = `none`;
@@ -293,17 +286,14 @@ class Input {
         // 然后给每一个tag都赋予一个onclick functino。
         for (let i = 0; i < inputTagList.length - 1; i++) {
             inputTagList[i].onclick = function () {
-                // alert(this.value);
                 if (this.value === ``) {
                     reminderList[i].style.display = `block`;
                     setTimeout(() => {
                         reminderList[i].style.width = `300px`;
                     }, 1000)
-
                     errorTextList[i].style.display = `none`;
                     errorTextList[i].style.width = `150`;
                     wholeInput[i].style.border = `1px solid purple`
-
                 } else {
                     reminderList[i].style.display = `none`;
                     reminderList[i].style.width = `130px`;
@@ -330,7 +320,6 @@ class Input {
         const submit = document.getElementById(`submit`);
         const inputTagList = document.getElementsByTagName("input");
         submit.onclick = () => {
-
             for (let i = 0; i < inputTagList.length - 1; i++) {
                 if (i === 0) {
                     this.data.name = inputTagList[i].value
@@ -345,41 +334,33 @@ class Input {
             // There is a need to solve the cors issue ...
             const apiLink = `http://localhost:8010/submit`
             let postData = JSON.stringify(this.data)
-
             xhttp.open("post", apiLink);
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(postData);
             xhttp.onload = function () {
                 let responseText = xhttp.responseText;
-                console.log(responseText);
             };
-
             xhttp.onerror = function () {
-                console.log('There was an error!');
             };
         }
     }
-    
+
+
     init = () => {
         window.addEventListener('input', this.handleInputChange.bind(this), false);
+
     }
 }
 
 
 window.tools = new Tools();
-//Handle click event
 window.click = new Click();
 window.click.init();
 
-//Handle scroll event
 window.scroll = new Scroll();
 window.scroll.init();
 
-// Handle Input event
 window.input = new Input();
 window.input.init();
 window.input.handleFocus();
 window.input.handlePost();
-
-
-
