@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jeremy Blog</title>
+    <title>Jeremy-Blog</title>
     <link rel="stylesheet" href='./CSS/index.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
@@ -20,11 +20,19 @@
                 <span class="header_name-EnglishName green middle"><small>Jerry</small></span>
                 <span>Zhang</span>
             </div>
-            <div class="headerElement header_navBar">
+            <div id=myTopnav class="headerElement header_navBar">
                 <ul>
+                    <div class="clearfix">
+                        <li class="navList navList-icon">
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                    </div>
+
                     <li class="navList">
                         <a class="middle navItem" href="#/home">
-                            Home
+                            &nbsp;Home
                             <div id="homeNav" class="navItemSelected"></div>
                         </a>
 
@@ -45,9 +53,11 @@
                             <div id="contactNav" class="navItemSelected "></div>
                         </a>
                     </li>
+
                 </ul>
             </div>
         </div>
+
         <div class="main">
             <div class="sub">
                 <div id="home" class="main_card main_card_home">
