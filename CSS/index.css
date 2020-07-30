@@ -84,10 +84,6 @@
     /* line-height : 3rem; */
 }
 
-.navItemSelected {
-    display: none;
-}
-
 .sticker-in {
     animation: 1s ease 0.1s 1 normal forwards running stick-in;
 }
@@ -119,8 +115,11 @@
     color: purple;
 }
 
+.navItemSelected {
+    display: none
+}
+
 .navItemSelected::after {
-    /* position: absolute; */
     content: "";
     width: 0rem;
     color: purple;
@@ -128,8 +127,11 @@
     margin-top: 0.5rem;
     display: block;
     z-index: 1001;
-    /* border-radius: 30%; */
     animation: 1s ease 0.1s 1 normal forwards running eAJKHT;
+}
+
+.navList:hover .navItemSelected::after {
+    color: lightgray;
 }
 
 @keyframes eAJKHT {
@@ -147,6 +149,22 @@
 }
 
 @media screen and (max-width: 600px) {
+    #homeNav .navItemSelected::after {
+        content: "";
+        width: 0rem;
+        color: purple;
+        border-bottom: 4px solid;
+        margin-top: 0.5rem;
+        display: none;
+        z-index: 1001;
+        animation: 1s ease 0.1s 1 normal forwards running eAJKHT;
+    }
+    @keyframes eAJKHT {
+        100% {
+            width: 100%;
+            /* transform: translateX(60%); */
+        }
+    }
     .header_name {
         display: none;
     }
@@ -410,9 +428,13 @@ a {
         position: relative;
         height: 20rem;
     }
+    .main_card_resume_content_experience:before {
+        top: 45px !important;
+        left: 0.5rem !important;
+    }
     #experienceCard1 {
         top: 4.5rem;
-        left: 1.5rem;
+        left: 2rem;
     }
     #experienceCard2 {
         top: 11.5rem;
@@ -502,7 +524,7 @@ a {
 
 .main_card_home_contentInfo .main_card_home_content-aboutMe {
     float: left;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 95px;
 }
 
@@ -855,9 +877,6 @@ li[class*="lala"] {
 }
 
 
-/* Ok */
-
-
 /* //////////////////////////////////////// */
 
 .main_card_resume_footer ul {
@@ -948,12 +967,12 @@ li[class*="lala"] {
     display: flex;
     flex-direction: column;
     z-index: 1001;
-    border-radius: 15px 15px 15px 15px;
 }
 
 .main_card_contact_header {
     flex-basis: 20%;
     background-color: purple;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .main_card_contact_header h1 {
@@ -964,6 +983,7 @@ li[class*="lala"] {
     flex-basis: 80%;
     background-color: whitesmoke;
     display: flex;
+    border-radius: 0px 15px 15px 15px;
 }
 
 .main_card_contact_content_GetTouch {
@@ -1123,13 +1143,9 @@ li[class*="lala"] {
 }
 
 .footer {
-    /* float              : left; */
     text-align: center;
-    /* background-color      : black; */
     bottom: 0;
     position: fixed;
-    /* margin-bottom         :10%; */
-    /* background-color      : black; */
     color: black;
     width: 100%;
     height: 40px;
@@ -1230,4 +1246,12 @@ li[class*="lala"] {
 
 .red {
     color: red;
+}
+
+.green {
+    color: green;
+}
+
+.shadow1 {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .09), 0 15px 40px rgba(166, 173, 201, .6);
 }
