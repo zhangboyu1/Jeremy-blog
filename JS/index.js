@@ -181,6 +181,7 @@ class Click {
         var x = document.getElementById("myTopnav");
         var y = document.getElementsByClassName("sub");
         if (event.target.className === `middle navItem`) {
+            console.log('yaya')
             x.className = "headerElement header_navBar";
             y[0].style.marginTop = ''
             if (event.target.childNodes[1].tagName != `A`) {
