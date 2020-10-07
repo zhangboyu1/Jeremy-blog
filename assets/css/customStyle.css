@@ -1,0 +1,300 @@
+.circle {
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    font-size: 50px;
+    background: #2C3F51;
+  }
+
+  .main-page {
+    justify-content: center;
+    display: inline-block;
+  }
+
+  #buttonExplore, .carousel-item .btn {
+    margin-bottom: 2%;
+    border-radius: 100rem;
+    outline: 0;
+    border: none;
+    width: 150px;
+    height: 44px;
+    background-color: #E14A3B !important;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  #headingText {
+    margin: 4%;
+    font-size: 22px;
+    color: #17A598;
+    font-weight: bold;
+  }
+
+  #profileImage {
+    margin: 4%;
+    width: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#profileName {
+    color: white;
+    font-size: 3rem;
+}
+
+.card-parameters .card {
+    background-color: #17A598;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.card-parameters {
+    display: flex;
+    justify-content: center;
+}
+
+.card-parameters .card-title {
+    color:white;
+    font-weight: bold;
+}   
+
+.skills-heading {
+    font-size: 2.5rem;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.skills-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 3% 10% 5% 10%;
+    color: #F5F5F5;
+}
+
+.fp-tableCell {
+    text-align: -webkit-center;
+}
+
+.carousel .carousel-indicators li {
+    width: 1.00rem;
+    height: 1.0rem;
+}
+
+.carousel-indicators {
+    bottom: 55px;
+}
+
+#project-section, #contact-section {
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.card-img-top {
+    height: 150px;
+    margin-top: 15px;
+    width: 300px;
+    border: 6px solid white;
+}
+
+.carousel-item .card {
+    border-radius: 0px 100px 0px 100px;
+    background-color: #2C3F51;
+    color: white;
+    justify-content: center;
+    display: -webkit-box;
+}
+
+.card .card-body .card-text {
+    color: white;
+}
+
+.carousel-inner {
+    justify-content: center;
+    display: -webkit-box;
+}
+
+.contact-main {
+    width: 710px;
+    height: 210px;
+    margin: auto;
+}
+
+.contact-topLeft {
+    width: 500px;
+    margin-right: 10px;
+    float: left;
+    background-color: #17A598;
+    height: 100px;
+}
+
+.contact-topRight {
+    width: 200px;
+    float: left;
+    background-color: #17A598;
+    height: 100px;
+}
+
+.contact-bottomLeft {
+    width: 200px;
+    float: left;
+    background-color: #17A598;
+    height: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.contact-bottomRight {
+    width: 500px;
+    float: left;
+    background-color: #17A598;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.contact-main img {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.contact-detail {
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.list-group li{
+  height: 60px;
+}
+
+.modal-text {
+    width: 350px;
+    background-color: #A4A5A6;
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+    margin-top: 75px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modal {
+    background: none;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+    max-width:100%;
+    width: 100%;
+    padding-top: 115px;
+}
+
+.modal a.close-modal {
+    top: 1px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.slideInRight1 {
+    animation-name: slideInRight1;
+  }
+
+  .slideInRight2 {
+    animation-name: slideInRight2;
+  }
+
+  .slideInRight3 {
+    animation-name: slideInRight3;
+  }
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes slideInRight1 {
+    0% {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+      }
+    
+      50% {
+        transform: translate3d(200%, 0, 0);
+      }
+  
+      100% {
+          transform: translate3d(40%, 0, 0);
+        }
+  }
+
+  @keyframes slideInRight2 {
+    0% {
+        transform: translate3d(0%, 0, 0);
+        visibility: visible;
+      }
+    
+      50% {
+        transform: translate3d(200%, 0, 0);
+      }
+  
+      100% {
+          transform: translate3d(80%, 0, 0);
+        }
+  }
+
+  @keyframes slideInRight3 {
+    0% {
+      transform: translate3d(0%, 0, 0);
+      visibility: visible;
+    }
+  
+    50% {
+      transform: translate3d(200%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(120%, 0, 0);
+      }
+  }
+
+  .carousel-item .btn {
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+  .carousel-item .btn:hover {
+    transform: scale(1.2)
+  }
+
+  #buttonExplore {
+    animation-name: shake-with-delay;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake-with-delay {
+    from, 16%, to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    1.6%, 4.8%, 8%, 11.2%, 14.4% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    3.2%, 6.4%, 9.6%, 12.8% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+}
